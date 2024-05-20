@@ -58,10 +58,6 @@ class CalculatorViewModel: ViewModel() {
         val number1 = state.previousNumber.toBigDecimal()
         val number2 = state.currentNumber.toBigDecimal()
 
-        if (number1 == null || number2 == null) {
-            return
-        }
-
         val result = when (state.operation) {
             CalculatorOperation.Add -> (number1 + number2).toPlainString().removeSuffix(".0")
             CalculatorOperation.Subtract -> (number1 - number2).toPlainString().removeSuffix(".0")
