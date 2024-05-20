@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,8 +25,8 @@ import com.gittes.basiccalculator.CalculatorViewModel
 
 @Composable
 fun CalculatorScreen(
-    viewModel: CalculatorViewModel = viewModel(),
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: CalculatorViewModel = viewModel()
 ) {
     Box(modifier = modifier) {
         Column(
@@ -41,6 +40,7 @@ fun CalculatorScreen(
                 textAlign = TextAlign.End,
                 fontSize = 48.sp,
                 fontWeight = FontWeight.Bold,
+                lineHeight = 48.sp,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 16.dp)
