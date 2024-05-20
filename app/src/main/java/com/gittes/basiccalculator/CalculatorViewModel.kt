@@ -71,7 +71,7 @@ class CalculatorViewModel: ViewModel() {
         state = state.copy(
             currentNumber = if (resultToCurrentNumber) result else "0",
             previousNumber = if (resultToCurrentNumber) "0" else result,
-            operation = if (resultToCurrentNumber) null else state.operation
+            operation = null
         )
     }
 
